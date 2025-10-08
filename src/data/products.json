@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Huile d'olive extra vierge bio 750ml",
+      "shortDescription": "Huile d'olive premium pressée à froid, certifiée biologique",
+      "price": 85,
+      "category": "Huiles",
+      "image": "/images/huile-750ml.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Huile d'olive extra vierge bio 1L",
+      "shortDescription": "Format familial d'huile d'olive extra vierge première pression",
+      "price": 110,
+      "category": "Huiles",
+      "image": "/images/huile-1l.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Huile d'olive extra vierge bio 5L",
+      "shortDescription": "Bidon économique pour les amateurs d'huile d'olive authentique",
+      "price": 450,
+      "category": "Huiles",
+      "image": "/images/huile-5l.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Olives Beldi naturelles",
+      "shortDescription": "Olives traditionnelles marocaines au naturel, saveur authentique",
+      "price": 45,
+      "category": "Olives",
+      "image": "/images/olives-naturelles.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Olives Beldi marinées",
+      "shortDescription": "Olives marinées aux épices traditionnelles et citron confit",
+      "price": 50,
+      "category": "Olives",
+      "image": "/images/olives-marinees.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Tapenade d'olives noires",
+      "shortDescription": "Pâte d'olives artisanale aux herbes de Provence",
+      "price": 65,
+      "category": "Tapenades",
+      "image": "/images/tapenade.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Miel naturel de montagne 500g",
+      "shortDescription": "Miel de fleurs sauvages récolté dans la région de Tanger",
+      "price": 120,
+      "category": "Miels",
+      "image": "/images/miel-500g.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Miel de thym 250g",
+      "shortDescription": "Miel rare de thym sauvage, goût intense et bienfaits reconnus",
+      "price": 95,
+      "category": "Miels",
+      "image": "/images/miel-thym.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Savon artisanal à l'huile d'olive",
+      "shortDescription": "Savon naturel fabriqué à la main, doux pour la peau",
+      "price": 35,
+      "category": "Cosmétiques",
+      "image": "/images/savon.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Confiture de figues maison",
+      "shortDescription": "Confiture artisanale de figues fraîches, recette traditionnelle",
+      "price": 55,
+      "category": "Confitures",
+      "image": "/images/confiture-figues.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Amlou aux amandes 250g",
+      "shortDescription": "Pâte à tartiner traditionnelle: amandes, huile d'argan et miel",
+      "price": 75,
+      "category": "Spécialités",
+      "image": "/images/amlou.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Amlou aux amandes 500g",
+      "shortDescription": "Format familial d'Amlou aux amandes et miel",
+      "price": 140,
+      "category": "Spécialités",
+      "image": "/images/amlou-extra.jpg"
+    }
+  ]
+}

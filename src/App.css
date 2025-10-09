@@ -1,40 +1,131 @@
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.App{
-    font-family: ;
-    display: flex;
-
+  font-family: "Poppins", sans-serif;
 }
 
+.App {
 
-.Side-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 100vh;
-    background-color: rgb(39, 126, 58);
-    font-size: x-large;
-
-}
-.Side-bar ul{
-    list-style: none;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
-.Side-bar a{
-    text-decoration: none;
-    color: black;
+
+
+.SideBar {
+  width: 250px;
+  background: #277c3a;
+  color: white;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-.product-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    
+.SideBar ul {
+  list-style: none;
+  width: 100%;
 }
-.ProductZone{
-    padding: 20px;
+
+.SideBar li {
+  margin: 170px 0px;
+  text-align: center;
+}
+
+.SideBar a {
+
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  padding: 10px;
+  background-color: #94890d;
+  border-radius: 23px;
+  box-shadow: -2px 2px 6px #000000;
+
+
+  
+}
+
+.SideBar a:hover {
+  padding: 10px;
+  background-color: #7c7c7c;
+  border-radius: 23px;
+  box-shadow: -2px 2px 6px #000000;
+}
+
+.ProductZone {
+  flex: 1;
+  padding: 40px;
+  background-color: #fafafa;
+}
+
+.ProductZone h1 {
+  font-size: 2rem;
+
+   margin-bottom: 40px;
+  color: #333;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  width: 170px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 16px #00000026;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-category {
+  display:block;
+  margin: 10px;
+  padding: 3px 10px;
+  
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  background-color: #277c3a;
+}
+
+.product-title {
+
+
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 10px 10px;
+  min-height: 45px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #277c3a;
+  font-size: 1.2rem;
+  margin: 10px;
+
+  
 }

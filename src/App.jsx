@@ -10,10 +10,7 @@ function App() {
       <SideBar />
       </div>
       <div id="Produits" className="ProductZone">
-      <h1>Nos Produits</h1>
-      <div className="Productlist">
       <ProductList />
-      </div>
       </div>
     </div>
   );

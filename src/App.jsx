@@ -9,9 +9,9 @@ function App() {
       <div className="SideBar">
       <SideBar />
       </div>
-      <div id="Produits" className="ProductZone">
+      {/* <div id="Produits" className="ProductZone">
       <ProductList />
-      </div>
+      </div> */}
     </div>
   );
 }

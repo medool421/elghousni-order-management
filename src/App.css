@@ -7,34 +7,42 @@
 
 .App {
 
-  display: flex;
-  min-height: 100vh;
+  /* display: flex; */
   background-color: #f5f5f5;
+    min-height: 100vh;
+
 }
 
+.Logo {
+  margin: 20px 400px;
+  padding: 7px;
+   border: solid 3px;
+  text-align: center;
 
+}
 
 .SideBar {
-  width: 250px;
   background: #277c3a;
   color: white;
-   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 40px 20px;
 }
 
 .SideBar ul {
+  display: flex;
+    justify-content: center;
+
+gap: 50px;
   list-style: none;
   width: 100%;
 }
 
 .SideBar li {
-  margin: 170px 0px;
+  margin: 30pX;
   text-align: center;
 }
 
-.SideBar a {
+.SideBar button {
 
   color: white;
   text-decoration: none;
@@ -44,16 +52,19 @@
   background-color: #94890d;
   border-radius: 23px;
   box-shadow: -2px 2px 6px #000000;
-
+border-style: none;
+  cursor: pointer;
 
   
 }
 
-.SideBar a:hover {
+.SideBar button:hover {
   padding: 10px;
   background-color: #7c7c7c;
   border-radius: 23px;
   box-shadow: -2px 2px 6px #000000;
+    transform: translateY(-2px);
+
 }
 
 .ProductZone {
@@ -96,7 +107,7 @@
 }
 
 .product-category {
-  display:block;
+   display: block;
   margin: 10px;
   padding: 3px 10px;
   

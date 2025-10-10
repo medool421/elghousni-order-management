@@ -1,5 +1,18 @@
-import React from "react";
-function Product({ product }) {
+import React, {useState} from "react";
+function Product({ product,onAddProduct}) {
+  const [quantity, setQuantity] = useState(0);
+
+  const handleDecrease = () => {const newQuantity = quantity > 0 
+  ? quantity - 1 : 0;
+  setQuantity(newQuantity);
+  newQuantity > 0 && onAddProduct(product, newQuantity);
+};
+const handleIncrease = () => { const newQuantity = quantity + 1;
+  setQuantity(newQuantity);
+  onAddProduct(product, newQuantity);
+}
+
+
   return (
     <div className="product-card">
       <Img src={product.image} alt={product.title} />
@@ -7,9 +20,16 @@ function Product({ product }) {
       <h2><Title title={product.title} /></h2>
       <Desc desc={product.shortDescription} />
       <Price price={product.price} />
+
+      <div className="product-actions">
+        <button onClick={handleDecrease} className="btn-decrease">-</button>
+        <span className="product-quantity">{quantity}</span>
+        <button onClick={handleIncrease} className="btn-increase">+</button>
+      </div>
     </div>
+
   );
-}
+};
 
 function Img({ src, alt }) {
   return (

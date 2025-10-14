@@ -5,7 +5,7 @@ function Product({ product,onAddProduct}) {
   const handleDecrease = () => {const newQuantity = quantity > 0 
   ? quantity - 1 : 0;
   setQuantity(newQuantity);
-  newQuantity > 0 && onAddProduct(product, newQuantity);
+  onAddProduct(product, newQuantity);
 };
 const handleIncrease = () => { const newQuantity = quantity + 1;
   setQuantity(newQuantity);

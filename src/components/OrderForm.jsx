@@ -58,12 +58,9 @@ function OrderForm({ onAddOrder }) {
       customerName: customerName.trim(),
       customerPhone: customerPhone.trim(),
       products: selectedProducts,
-      status: "en_attente",
+      status: "En_attente",
       date: new Date().toLocaleDateString("fr-FR"),
-      time: new Date().toLocaleTimeString("fr-FR", { 
-        hour: '2-digit', 
-        minute: '2-digit' 
-      })
+      time: new Date().toLocaleTimeString("fr-FR")
     };
 
     onAddOrder(newOrder);
@@ -72,7 +69,6 @@ function OrderForm({ onAddOrder }) {
     setCustomerPhone("");
     setSelectedProducts([]);
     
-    alert("✅ Commande créée avec succès !");
   };
 
   return (

@@ -179,3 +179,8 @@ button:hover {
   text-align: center;
   padding: 80px;
 }
+
+.btn-decrease {
+  position: relative;
+  z-index: 20;
+}

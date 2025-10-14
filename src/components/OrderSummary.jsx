@@ -23,8 +23,9 @@ function OrderSummary({ selectedProducts, onRemoveProduct }) {
           <div key={product.id} className="summary-item">
             <div className="item-info">
               <p className="item-name">{product.title}</p>
+              
               <p className="item-details">
-                {product.quantity} × {product.price} DH
+                {product.quantity} x {product.price} DH
               </p>
             </div>
             <div className="item-actions">

@@ -36,7 +36,7 @@ function OrderSummary({ selectedProducts, onRemoveProduct }) {
                 onClick={() => onRemoveProduct(product.id)}
                 className="btn-remove"
               >
-                🗑️
+                X
               </button>
             </div>
           </div>

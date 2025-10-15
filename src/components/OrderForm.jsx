@@ -7,16 +7,16 @@ function OrderForm({ onAddOrder }) {
   const [customerPhone, setCustomerPhone] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]);
 
-  // Fonction pour ajouter/modifier un produit dans la commande
   const handleAddProduct = (product, quantity) => {
+
     const existingProduct = selectedProducts.find(item => item.id === product.id);
 
     if (quantity === 0) {
+
       setSelectedProducts(selectedProducts.filter(item => item.id !== product.id));
     } else if (existingProduct) {
 
-
-        setSelectedProducts(
+      setSelectedProducts(
         selectedProducts.map(item =>
           item.id === product.id
             ? { ...item, quantity: quantity }
@@ -24,6 +24,7 @@ function OrderForm({ onAddOrder }) {
         )
       );
     } else {
+
       setSelectedProducts([
         ...selectedProducts,
         { ...product, quantity: quantity }
@@ -58,9 +59,12 @@ function OrderForm({ onAddOrder }) {
       customerName: customerName.trim(),
       customerPhone: customerPhone.trim(),
       products: selectedProducts,
-      status: "En_attente",
+      status: "en_attente",
       date: new Date().toLocaleDateString("fr-FR"),
-      time: new Date().toLocaleTimeString("fr-FR")
+      time: new Date().toLocaleTimeString("fr-FR", { 
+        hour: '2-digit', 
+        minute: '2-digit' 
+      })
     };
 
     onAddOrder(newOrder);
@@ -69,6 +73,7 @@ function OrderForm({ onAddOrder }) {
     setCustomerPhone("");
     setSelectedProducts([]);
     
+    alert("Commande créée avec succès !");
   };
 
   return (
@@ -103,7 +108,7 @@ function OrderForm({ onAddOrder }) {
       </div>
 
       <div className="form-section">
-        <h3>🛍️ Sélectionner les Produits</h3>
+        <h3> Sélectionner les Produits</h3>
         <ProductList onAddProduct={handleAddProduct} />
       </div>
 
@@ -116,7 +121,7 @@ function OrderForm({ onAddOrder }) {
 
       <div className="form-actions">
         <button onClick={handleSubmit} className="btn-submit">
-          Valide la Commande
+          Valider la Commande
         </button>
       </div>
     </div>

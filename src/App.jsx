@@ -1,20 +1,41 @@
-import React from "react";
-import ProductList from "../src/components/ProductList";
-import SideBar from "./components/SideBar";
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import OrderForm from "./components/OrderForm";
+import OrderList from "./components/OrderList";
 import "./App.css";
 
-
 function App() {
+
+  const [currentView, setCurrentView] = useState('new-order');
+  const [orders, setOrders] = useState([]);
+
+
+  const handleAddOrder = (newOrder) => {
+    setOrders([...orders, newOrder]);
+  };
+
   return (
     <div className="App">
-      <div className="SideBar">
-      <SideBar />
-      </div>
-      {/* <div id="Produits" className="ProductZone">
-      <ProductList />
-      </div> */}
+
+      <Header />
+      
+
+      <Navigation 
+        currentView={currentView} 
+        setCurrentView={setCurrentView} 
+      />
+      
+
+      <main className="main-content">
+        {currentView === 'new-order' ? (
+          <OrderForm onAddOrder={handleAddOrder} />
+        ) : (
+          <OrderList orders={orders} />
+        )}
+      </main>
     </div>
   );
 }
 
-export default App; 
+export default App;

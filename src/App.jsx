@@ -1,40 +1,33 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
-import OrderForm from "./components/OrderForm";
-import OrderList from "./components/OrderList";
+import CreateOrderPage from "./pages/CreateOrderPage";
+import OrdersListPage from "./pages/OrdersListPage";
+import ProductsPage from "./pages/ProductsPage";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  const [currentView, setCurrentView] = useState('new-order');
-  const [orders, setOrders] = useState([]);
-
-
-  const handleAddOrder = (newOrder) => {
-    setOrders([...orders, newOrder]);
-  };
-
   return (
+  <BrowserRouter>
     <div className="App">
 
       <Header />
       
 
-      <Navigation 
-        currentView={currentView} 
-        setCurrentView={setCurrentView} 
-      />
+      <Navigation/>
       
 
       <main className="main-content">
-        {currentView === 'new-order' ? (
-          <OrderForm onAddOrder={handleAddOrder} />
-        ) : (
-          <OrderList orders={orders} />
-        )}
+          <Routes>
+            <Route path="/" element={<CreateOrderPage />} />
+            <Route path="/orders" element={<OrdersListPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+          </Routes>
       </main>
     </div>
+  </BrowserRouter>
   );
 }
 

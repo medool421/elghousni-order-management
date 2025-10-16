@@ -1,28 +1,26 @@
 import React from "react";
+import {Link, useLocation} from "react-router-dom"
 
-function Navigation({ currentView, setCurrentView }) {
+function Navigation() {
+  const location = useLocation();
   return (
     <nav className="SideBar">
       <ul>
-        <li>
-          <button 
-            className={`nav-link ${currentView === 'new-order' ? 'active' : ''}`}
-            onClick={() => setCurrentView('new-order')}
-          >
-            Créer une nouvelle commande
-          </button>
-        </li>
-        <li>
-          <button 
-            className={`nav-link ${currentView === 'order-list' ? 'active' : ''}`}
-            onClick={() => setCurrentView('order-list')}
-          >
-            Liste des commandes
-          </button>
-        </li>
+        <li><Link to="/"><button className={location.pathname === '/' ? 'active' : ''}>
+          Créer une commande
+            </button></Link></li>
+        
+        <li><Link to="/orders"><button className={location.pathname === '/orders' ? 'active' : ''}>
+              Liste des commandes
+            </button></Link></li>
+        
+        <li><Link to="/products"><button className={location.pathname === '/products' ? 'active' : ''}>
+              Gérer les produits
+            </button></Link></li>
       </ul>
     </nav>
   );
 }
+
 
 export default Navigation;

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import ProductList from "./ProductList";
 import OrderSummary from "./OrderSummary";
+import useStore from "../store/useStore";
 
 function OrderForm({ onAddOrder }) {
+  
+  const addOrder = useStore((state) => state.addOrder);
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]);
@@ -67,7 +70,7 @@ function OrderForm({ onAddOrder }) {
       })
     };
 
-    onAddOrder(newOrder);
+    addOrder(newOrder);
 
     setCustomerName("");
     setCustomerPhone("");

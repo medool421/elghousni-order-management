@@ -1,13 +1,13 @@
 import React from "react";
 import Product from "./Product";
-import data from "../data/products.json";
+import useStore from "../store/useStore";
 
 function ProductList({ onAddProduct }) {
-  console.log(data);
-  
+
+  const products = useStore((state) => state.products);
   return (
     <div className="product-list">
-      {data.products.map((item) => (
+      {products.map((item) => (
         <Product key={item.id} product={item} onAddProduct={onAddProduct} />
       ))}
     </div>

@@ -286,7 +286,6 @@ input {
   box-shadow: 0 6px 20px rgba(39, 124, 58, 0.4);
 }
 
-/* ========== ORDER SUMMARY STYLES ========== */
 .order-summary {
   background-color: white;
   padding: 25px;
@@ -388,7 +387,6 @@ input {
   font-weight: bold;
 }
 
-/* ========== ORDER LIST STYLES ========== */
 .OrderZone {
   background-color: white;
   padding: 40px;
@@ -528,9 +526,7 @@ input {
   color: #333;
 }
 
-.form-input-text,
-.form-textarea,
-.form-select {
+.form-input-text, .form-textarea, .form-select {
   width: 100%;
   padding: 12px;
   border: 2px solid #ddd;
@@ -538,9 +534,7 @@ input {
   font-size: 1rem;
 }
 
-.form-input-text:focus,
-.form-textarea:focus,
-.form-select:focus {
+.form-input-text:focus, .form-textarea:focus, .form-select:focus {
   outline: none;
   border-color: #277c3a;
 }
@@ -556,8 +550,7 @@ input {
   margin-top: 20px;
 }
 
-.btn-save,
-.btn-cancel {
+.btn-save, .btn-cancel {
   flex: 1;
   padding: 12px;
   border: none;
@@ -592,8 +585,7 @@ input {
   border-top: 1px solid #eee;
 }
 
-.btn-edit,
-.btn-delete-product {
+.btn-edit, .btn-delete-product {
   flex: 1;
   padding: 8px;
   border: none;
@@ -602,20 +594,3 @@ input {
   font-weight: bold;
 }
 
-.btn-edit {
-  background: #ffc107;
-  color: #333;
-}
-
-.btn-edit:hover {
-  background: #e0a800;
-}
-
-.btn-delete-product {
-  background: #dc3545;
-  color: white;
-}
-
-.btn-delete-product:hover {
-  background: #c82333;
-}

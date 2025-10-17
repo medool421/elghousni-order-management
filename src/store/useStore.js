@@ -1,7 +1,8 @@
 import {create } from "zustand";
 import productsData from "../data/products.json";
+import { createJSONStorage, persist} from "zustand/middleware";
 
-const useStore = create((set) =>({
+const useStore = create(persist((set) =>({
     orders: [], 
     addOrder: (newOrder) => set((state) => ({orders: [...state.orders, newOrder]})),
     
@@ -17,7 +18,14 @@ const useStore = create((set) =>({
         products: state.products.filter(product => product.id !== productId)
   })),
   
-})); 
+})),
+{
+    name: "Elghoussni-Cooperative",
+    storage : createJSONStorage(()=>localStorage)
+
+}
+
+); 
 
 
 

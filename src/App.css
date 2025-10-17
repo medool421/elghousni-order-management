@@ -594,3 +594,20 @@ input {
   font-weight: bold;
 }
 
+.btn-edit {
+  background: #c6ffd2;
+  color: #333;
+}
+
+.btn-edit:hover {
+  background: #7eff9a;
+}
+
+.btn-delete-product {
+  background: #277c3a;
+  color: white;
+}
+
+.btn-delete-product:hover {
+  background: #0d501b;
+}
